@@ -19,15 +19,22 @@ namespace BookManager.Persistence.SqlServer;
     public DbSet<BookEntity> Books { get; set; }
 
 
-   //protected override void OnModelCreating(ModelBuilder modelBuilder)
-   // {
-       
-   //     modelBuilder.Entity<AuthorEntity>().HasKey(a => a.Id);
-   //     modelBuilder.Entity<BookEntity>().HasKey(b => b.Id);
-     
-   // }
+   protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
 
-    //Esto indica las claves primarias a EF, ¿es necesario?
-
+        modelBuilder
+             .Entity<AuthorEntity>()
+             .HasKey(a => a.Id);//Esto indica las claves primarias a EF
+          
+       modelBuilder
+            .Entity<BookEntity>().HasKey(b => b.Id);
+        modelBuilder.Entity<AuthorEntity>()
+                 .HasMany(author => author.Books)  // Un autor tiene muchos libros
+                 .WithOne(book => book.Author)     // Un libro pertenece a un autor
+                 .HasForeignKey(book => book.AuthorId);  // Clave foránea en BookEntity que apunta a AuthorEntity
+    }
 }
+
+   
+
 
