@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookManager.Application.Uni
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookManager.FunctionalTests", "test\BookManager.FunctionalTests\BookManager.FunctionalTests.csproj", "{35A6AA17-DCCE-43CE-AE9E-BBFB29F1D2FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookManager.Persistence.SqlServer", "src\BookManager.Persistence.SqlServer\BookManager.Persistence.SqlServer.csproj", "{53ACFAF1-850E-462A-87AB-B4E9549AD4F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookManager.Persistence.SqlServer", "src\BookManager.Persistence.SqlServer\BookManager.Persistence.SqlServer.csproj", "{53ACFAF1-850E-462A-87AB-B4E9549AD4F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
