@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BookManager.Application\BookManager.Application.csproj" />
     <ProjectReference Include="..\BookManager.Persistence.SqlServer\BookManager.Persistence.SqlServer.csproj" />
   </ItemGroup>
 

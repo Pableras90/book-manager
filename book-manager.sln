@@ -8,6 +8,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookManager.Domain", "src\BookManager.Domain\BookManager.Domain.csproj", "{9AE58A00-10BE-4D98-8CAD-4E6FC565FBF1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookManager.Application", "src\BookManager.Application\BookManager.Application.csproj", "{0ED59F9A-ECE7-4D04-9CCC-EFAE1CF91D2B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{53ACFAF1-850E-462A-87AB-B4E9549AD4F4} = {53ACFAF1-850E-462A-87AB-B4E9549AD4F4}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookManager", "src\BookManager\BookManager.csproj", "{A5182DFF-35B4-45E5-A4C5-43ABC21247F9}"
 EndProject

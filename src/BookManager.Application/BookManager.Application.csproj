@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BookManager.Domain\BookManager.Domain.csproj" />
+    <ProjectReference Include="..\BookManager.Persistence.SqlServer\BookManager.Persistence.SqlServer.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
