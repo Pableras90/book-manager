@@ -1,9 +1,5 @@
 using BookManager.Persistence.SqlServer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Swashbuckle.AspNetCore.Swagger;
-using Swashbuckle.AspNetCore.SwaggerGen;
-using System.Reflection;
 using BookManager.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -34,3 +30,4 @@ app.UseSwaggerUI(c =>
 
 app.MapControllers();
 app.Run();
+

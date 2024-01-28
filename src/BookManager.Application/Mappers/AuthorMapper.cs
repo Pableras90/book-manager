@@ -13,7 +13,8 @@ public static class AuthorMapper
     public static AuthorEntity MapToEntity(this AuthorModel model)
     {
         return new AuthorEntity
-        {
+        {   
+            Id = model.Id,
             Name = model.Name,
             LastName = model.LastName,
             Birth = model.Birth,

@@ -9,7 +9,7 @@ namespace BookManager.Domain
         public DateTime PublishedOn { get; set; }
         public string Description { get; set; } = string.Empty;
         public int AuthorId { get; set; }  // Clave foránea
-        public virtual AuthorEntity? Author { get; set; }//Sirve para facilitar el acceso al Autor
+        public virtual AuthorEntity Author { get; set; }//Sirve para facilitar el acceso al Autor
 
       
     }
