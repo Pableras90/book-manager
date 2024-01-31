@@ -1,16 +1,12 @@
 ﻿using BookManager.Application.Models;
 using BookManager.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace BookManager.Application.Mappers
 {
     public static class BookMapper
     {
-        public static BookEntity MapToEntity(this BookModel model)
+        public static BookEntity MapToEntity(BookModel model)
         {
             return new BookEntity
             {
@@ -21,5 +17,28 @@ namespace BookManager.Application.Mappers
                 AuthorId = model.AuthorId
             };
         }
+        public static List<BookModel> MapToModel(List<BookEntity> entities)
+        {
+            List<BookModel> models = new List<BookModel>();
+            foreach(var entity in entities)
+            {
+                var model = MapToModel(entity);
+                models.Add(model);
+            }
+            return models;
+
+        }
+        public static BookModel MapToModel(BookEntity entity)
+        {
+            return new BookModel
+            {
+                Id = entity.Id,
+                Title = entity.Title,
+                PublishedOn = entity.PublishedOn,
+                Description = entity.Description,
+                AuthorId = entity.AuthorId
+            };
+        }
     }
+    
 }

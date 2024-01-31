@@ -29,7 +29,7 @@ namespace BookManager.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest($"Error al añadir el autor: {ex.Message}");
+                return BadRequest($"Error al añadir el autor: {ex.InnerException.Message}");
             }
         }
     }
